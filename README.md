@@ -14,6 +14,16 @@ For example:
     $ cdgo net/http
     Changing into /Users/cbro/go/src/net/http
 
+### gh-markdown.bash
+
+Renders GitHub flavored Markdown.
+
+For example:
+
+    $ gh-markdown -http README.md &
+    $ open http://localhost:8787
+
+
 # License
 
 [Apache 2.0](LICENSE)
