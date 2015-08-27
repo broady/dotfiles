@@ -15,7 +15,7 @@ function gh-markdown {
 
   if [[ -n "$http" ]]; then
     echo Serving HTTP on 8787
-    echo $html | nc -l 8787
+    echo "<html>$html" | nc -l 8787
   else
     echo $html
   fi
