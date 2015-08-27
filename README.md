@@ -3,7 +3,7 @@ I will begin adding some of my computer's configuration files to this repository
 Sample usage:
 
     $ git clone https://github.com/broady/dotfiles.git ~/.broady-dotfiles
-    $ echo '. ~/.broady-dotfiles/rc/*' >> ~/.bash_login
+    $ echo 'for f in ~/.broady-dotfiles/rc/*; do . $f; done' >> ~/.bash_login
 
 ### rc/cdgo.bash
 
