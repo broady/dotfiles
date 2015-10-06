@@ -8,13 +8,14 @@ set list listchars=tab:\·\ ,trail:·
 
 let g:gofmt_command = "goimports"
 
-" TODO
-" set rtp+=~/.vim/bundle/vundle/
-" set rtp+=/usr/local/go/misc/vim/
-" autocmd FileType go autocmd BufWritePre <buffer> Fmt
-" call vundle#rc()
-" Bundle 'gmarik/vundle'
-" Bundle 'Blackrush/vim-gocode'
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/go/misc/vim/
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+call vundle#begin()
+Plugin 'gmarik/vundle'
+Plugin 'Blackrush/vim-gocode'
+call vundle#end()
 
 " Hide the autocompletion scratch/preview window.
 set completeopt-=preview

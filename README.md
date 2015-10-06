@@ -24,6 +24,11 @@ For example:
     $ open http://localhost:8787
 
 
+### vimrc
+
+    $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    $ vim +PluginInstall +qall
+
 # License
 
 [Apache 2.0](LICENSE)
