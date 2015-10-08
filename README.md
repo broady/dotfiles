@@ -28,6 +28,10 @@ For example:
 
     $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     $ vim +PluginInstall +qall
+    $ go get golang.org/x/tools/cmd/goimports
+    $ go get github.com/nsf/gocode
+    $ go get github.com/rogpeppe/godef
+    $ cd ~/.vim/bundle/YouCompleteMe && ./install.py
 
 # License
 
