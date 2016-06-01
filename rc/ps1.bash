@@ -47,6 +47,8 @@ function _last_exit {
   if [ $exit != 0 ] && [ $exit != 130 ]; then
     echo -e "${red}Exit code $exit$reset"
   fi
+
+  history -a
 }
 
 # export for subshells
