@@ -27,3 +27,6 @@ filetype plugin indent on
 syntax off
 
 map ; :
+
+" Mouse support (scrolling, selection, etc)
+set mouse=a
