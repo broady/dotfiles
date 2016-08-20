@@ -51,8 +51,18 @@ function _last_exit {
   history -a
 }
 
+____adc_bin=$(which adc)
+function _adc {
+  if [ -n "$____adc_bin" ]; then
+    local active=$(adc ps1)
+    if [ -n "$active" ]; then
+      echo -n "☁️ $active "
+    fi
+  fi
+}
+
 # export for subshells
 export -f _parse_git_branch _parse_git_status _we_are_in_git_work_tree _pwd_depth_limit_2
-export PS1="\$(_pwd_depth_limit_2)\$(_parse_git_status)\$(_parse_git_branch) $ "
+export PS1="\$(_adc)\$(_pwd_depth_limit_2)\$(_parse_git_status)\$(_parse_git_branch) $ "
 export TERM=xterm-color
 export PROMPT_COMMAND=_last_exit
