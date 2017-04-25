@@ -5,10 +5,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\·\ ,trail:·
+set nojoinspaces
 
 let g:go_fmt_command = "goimports"
 
-let g:neocomplete#enable_at_startup = 1
 set completeopt=preview,menuone
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -16,17 +16,24 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'fatih/vim-go'
-Plugin 'Shougo/neocomplete'
+Plugin 'dracula/vim'
+Plugin 'chrisbra/Colorizer'
 call vundle#end()
 
 " Hide the autocompletion scratch/preview window.
 set completeopt-=preview
 
-filetype plugin indent on
+syntax on
+set t_Co=256
+colorscheme dracula
 
-syntax off
+filetype plugin indent on
 
 map ; :
 
 " Mouse support (scrolling, selection, etc)
 set mouse=a
+
+" Persistent history
+set undodir=~/.vim/undo
+set undofile
