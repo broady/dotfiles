@@ -1,0 +1,8 @@
+// allow emacs-style bash shortcut
+[
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
+    }
+]
